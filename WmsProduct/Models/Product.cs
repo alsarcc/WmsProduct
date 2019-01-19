@@ -40,7 +40,7 @@ namespace WmsProduct.Models
 
         //inventory or not?
         //enumeration?
-        public virtual Package Package { get; set; }
+        //public virtual Package Package { get; set; }
         public int PackageId { get; set; }
 
         public virtual Category SubCategory { get; set; }
