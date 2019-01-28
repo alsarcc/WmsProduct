@@ -5,16 +5,13 @@ using System.Web;
 
 namespace WmsProduct.Models
 {
-    public class Category
+    public class SubCategory
     {
-        //signifies the Id of each subcategory
         public int Id { get; set; }
-
-        //signifies the Id of each parent category
-        //public int? MainCategoryId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public virtual ICollection<SubCategory> SubCategories { get; set; }
+        public virtual Category MainCategory { get; set; }
+        public int MainCategoryId { get; set; }
     }
 }
