@@ -43,7 +43,8 @@ namespace WmsProduct.Models
         //public virtual Package Package { get; set; }
         public int PackageId { get; set; }
 
-        public virtual Category SubCategory { get; set; }
+
+        public virtual SubCategory SubCategory { get; set; }
         public int SubCategoryId { get; set; }
 
         //TODO Relationships

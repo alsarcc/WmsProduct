@@ -50,7 +50,7 @@ namespace WmsProduct.Migrations
                         SubCategoryId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Categories", t => t.SubCategoryId, cascadeDelete: true)
+                .ForeignKey("dbo.SubCategories", t => t.SubCategoryId, cascadeDelete: true)
                 .Index(t => t.SubCategoryId);
             
             CreateTable(
@@ -129,7 +129,7 @@ namespace WmsProduct.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
-            DropForeignKey("dbo.Products", "SubCategoryId", "dbo.Categories");
+            DropForeignKey("dbo.Products", "SubCategoryId", "dbo.SubCategories");
             DropForeignKey("dbo.SubCategories", "MainCategoryId", "dbo.Categories");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });

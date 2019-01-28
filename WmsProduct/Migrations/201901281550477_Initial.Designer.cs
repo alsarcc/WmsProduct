@@ -13,7 +13,7 @@ namespace WmsProduct.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201901281532295_Initial"; }
+            get { return "201901281550477_Initial"; }
         }
         
         string IMigrationMetadata.Source

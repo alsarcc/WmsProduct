@@ -13,5 +13,7 @@ namespace WmsProduct.Models
 
         public virtual Category MainCategory { get; set; }
         public int MainCategoryId { get; set; }
+
+        public virtual ICollection<Product> Products { get; set; }
     }
 }
